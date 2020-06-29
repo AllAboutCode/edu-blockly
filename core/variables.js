@@ -174,6 +174,13 @@ Blockly.Variables.flyoutCategoryBlocks = function(workspace) {
       block.setAttribute('gap', Blockly.Blocks['math_change'] ? 8 : 24);
       block.appendChild(
           Blockly.Variables.generateVariableFieldDom(mostRecentVariable));
+      var value = Blockly.Xml.textToDom(
+        '<value name="varset">' +
+        '<shadow type="textinline">' +
+        '<field name="text">0</field>' +
+        '</shadow>' +
+        '</value>');
+        block.appendChild(value);
       xmlList.push(block);
     }
     if (Blockly.Blocks['math_change']) {

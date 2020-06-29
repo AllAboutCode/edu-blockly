@@ -197,11 +197,6 @@ Blockly.tree.BaseNode.prototype.initAccessibility = function() {
           Blockly.utils.aria.State.LABELLEDBY, label.id);
     }
 
-    var img = this.getIconElement();
-    if (img) {
-      Blockly.utils.aria.setRole(img, Blockly.utils.aria.Role.PRESENTATION);
-    }
-
     var ce = this.getChildrenElement();
     if (ce) {
       Blockly.utils.aria.setRole(ce,
@@ -664,7 +659,6 @@ Blockly.tree.BaseNode.prototype.getRowDom = function() {
   row.style['padding-' + (this.isRightToLeft() ? 'right' : 'left')] =
       this.getPixelIndent_() + 'px';
 
-  row.appendChild(this.getIconDom());
   row.appendChild(this.getLabelDom());
 
   return row;

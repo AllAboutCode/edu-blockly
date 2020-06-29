@@ -185,24 +185,8 @@ Blockly.Python.init = function(workspace) {
  * @return {string} Completed code.
  */
 Blockly.Python.finish = function(code) {
-  // Convert the definitions dictionary into a list.
-  var imports = [];
-  var definitions = [];
-  for (var name in Blockly.Python.definitions_) {
-    var def = Blockly.Python.definitions_[name];
-    if (def.match(/^(from\s+\S+\s+)?import\s+\S+/)) {
-      imports.push(def);
-    } else {
-      definitions.push(def);
-    }
-  }
-  // Clean up temporary data.
-  delete Blockly.Python.definitions_;
-  delete Blockly.Python.functionNames_;
-  Blockly.Python.variableDB_.reset();
-  var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n\n');
-  return allDefs.replace(/\n\n+/g, '\n\n').replace(/\n*$/, '\n\n\n') + code;
-};
+  return code;
+}
 
 /**
  * Naked values are top-level blocks with outputs that aren't plugged into

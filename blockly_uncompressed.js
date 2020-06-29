@@ -24,7 +24,7 @@ this.BLOCKLY_BOOT = function(root) {
 goog.addDependency('../../../../core/block.js', ['Blockly.Block'], ['Blockly.Blocks', 'Blockly.Breakpoint', 'Blockly.Colours', 'Blockly.Connection', 'Blockly.Events', 'Blockly.Events.BlockChange', 'Blockly.Events.BlockCreate', 'Blockly.Events.BlockDelete', 'Blockly.Events.BlockMove', 'Blockly.Extensions', 'Blockly.FieldLabelHover', 'Blockly.FieldVariableGetter', 'Blockly.Input', 'Blockly.Workspace', 'Blockly.fieldRegistry', 'Blockly.navigation', 'Blockly.utils', 'Blockly.utils.Coordinate', 'Blockly.utils.object', 'Blockly.utils.string'], {'lang': 'es6'});
 goog.addDependency('../../../../core/block_animations.js', ['Blockly.blockAnimations'], ['Blockly.utils.dom'], {});
 goog.addDependency('../../../../core/block_drag_surface.js', ['Blockly.BlockDragSurfaceSvg'], ['Blockly.utils', 'Blockly.utils.Coordinate', 'Blockly.utils.dom'], {});
-goog.addDependency('../../../../core/block_dragger.js', ['Blockly.BlockDragger'], ['Blockly.Events', 'Blockly.Events.BlockMove', 'Blockly.Events.EndBlockDrag', 'Blockly.Events.Ui', 'Blockly.InsertionMarkerManager', 'Blockly.blockAnimations', 'Blockly.utils.Coordinate', 'Blockly.utils.dom'], {});
+goog.addDependency('../../../../core/block_dragger.js', ['Blockly.BlockDragger'], ['Blockly.Events', 'Blockly.Events.BlockMove', 'Blockly.Events.EndBlockDrag', 'Blockly.Events.Ui', 'Blockly.InsertionMarkerManager', 'Blockly.blockAnimations', 'Blockly.utils.Coordinate', 'Blockly.utils.dom'], {'lang': 'es6'});
 goog.addDependency('../../../../core/block_events.js', ['Blockly.Events.BlockBase', 'Blockly.Events.BlockChange', 'Blockly.Events.BlockCreate', 'Blockly.Events.BlockDelete', 'Blockly.Events.BlockMove', 'Blockly.Events.Change', 'Blockly.Events.Create', 'Blockly.Events.Delete', 'Blockly.Events.Move'], ['Blockly.Events', 'Blockly.Events.Abstract', 'Blockly.utils.Coordinate', 'Blockly.utils.object', 'Blockly.utils.xml'], {});
 goog.addDependency('../../../../core/block_svg.js', ['Blockly.BlockSvg'], ['Blockly.ASTNode', 'Blockly.Block', 'Blockly.ContextMenu', 'Blockly.Events', 'Blockly.Events.BlockMove', 'Blockly.Events.Ui', 'Blockly.Msg', 'Blockly.RenderedConnection', 'Blockly.TabNavigateCursor', 'Blockly.Tooltip', 'Blockly.Touch', 'Blockly.blockAnimations', 'Blockly.blockRendering.IPathObject', 'Blockly.navigation', 'Blockly.pxtBlocklyUtils', 'Blockly.utils', 'Blockly.utils.Coordinate', 'Blockly.utils.Rect', 'Blockly.utils.dom', 'Blockly.utils.object'], {});
 goog.addDependency('../../../../core/blockly.js', ['Blockly'], ['Blockly.Events', 'Blockly.Events.Ui', 'Blockly.Functions', 'Blockly.Procedures', 'Blockly.Tooltip', 'Blockly.Touch', 'Blockly.Variables', 'Blockly.WidgetDiv', 'Blockly.WorkspaceSvg', 'Blockly.Xml', 'Blockly.constants', 'Blockly.inject', 'Blockly.navigation', 'Blockly.utils', 'Blockly.utils.colour'], {});
@@ -1691,6 +1691,11 @@ goog.addDependency('promise/testsuiteadapter.js', ['goog.promise.testSuiteAdapte
 goog.addDependency('promise/testsuiteadapter.js', ['goog.promise.testSuiteAdapter'], ['goog.Promise'], {});
 goog.addDependency('promise/thenable.js', ['goog.Thenable'], [], {});
 goog.addDependency('promise/thenable.js', ['goog.Thenable'], [], {});
+goog.addDependency('proto/proto.js', ['goog.proto'], ['goog.proto.Serializer'], {});
+goog.addDependency('proto/proto.js', ['goog.proto'], ['goog.proto.Serializer'], {});
+goog.addDependency('proto/serializer.js', ['goog.proto.Serializer'], ['goog.json.Serializer', 'goog.string'], {});
+goog.addDependency('proto/serializer.js', ['goog.proto.Serializer'], ['goog.json.Serializer', 'goog.string'], {});
+goog.addDependency('proto/serializer_test.js', ['goog.protoTest'], ['goog.proto', 'goog.testing.testSuite'], {'lang': 'es6', 'module': 'goog'});
 goog.addDependency('proto2/descriptor.js', ['goog.proto2.Descriptor', 'goog.proto2.Metadata'], ['goog.array', 'goog.asserts', 'goog.object', 'goog.string'], {});
 goog.addDependency('proto2/descriptor.js', ['goog.proto2.Descriptor', 'goog.proto2.Metadata'], ['goog.array', 'goog.asserts', 'goog.object', 'goog.string'], {});
 goog.addDependency('proto2/descriptor_test.js', ['goog.proto2.DescriptorTest'], ['goog.proto2.Descriptor', 'goog.proto2.Message', 'goog.testing.testSuite'], {'lang': 'es6', 'module': 'goog'});
@@ -1719,11 +1724,6 @@ goog.addDependency('proto2/textformatserializer.js', ['goog.proto2.TextFormatSer
 goog.addDependency('proto2/textformatserializer_test.js', ['goog.proto2.TextFormatSerializerTest'], ['goog.proto2.ObjectSerializer', 'goog.proto2.TextFormatSerializer', 'goog.testing.testSuite', 'proto2.TestAllTypes'], {'lang': 'es6', 'module': 'goog'});
 goog.addDependency('proto2/util.js', ['goog.proto2.Util'], ['goog.asserts'], {});
 goog.addDependency('proto2/util.js', ['goog.proto2.Util'], ['goog.asserts'], {});
-goog.addDependency('proto/proto.js', ['goog.proto'], ['goog.proto.Serializer'], {});
-goog.addDependency('proto/proto.js', ['goog.proto'], ['goog.proto.Serializer'], {});
-goog.addDependency('proto/serializer.js', ['goog.proto.Serializer'], ['goog.json.Serializer', 'goog.string'], {});
-goog.addDependency('proto/serializer.js', ['goog.proto.Serializer'], ['goog.json.Serializer', 'goog.string'], {});
-goog.addDependency('proto/serializer_test.js', ['goog.protoTest'], ['goog.proto', 'goog.testing.testSuite'], {'lang': 'es6', 'module': 'goog'});
 goog.addDependency('pubsub/pubsub.js', ['goog.pubsub.PubSub'], ['goog.Disposable', 'goog.array', 'goog.async.run'], {});
 goog.addDependency('pubsub/pubsub.js', ['goog.pubsub.PubSub'], ['goog.Disposable', 'goog.array', 'goog.async.run'], {});
 goog.addDependency('pubsub/pubsub_test.js', ['goog.pubsub.PubSubTest'], ['goog.array', 'goog.pubsub.PubSub', 'goog.testing.MockClock', 'goog.testing.testSuite'], {'lang': 'es6', 'module': 'goog'});

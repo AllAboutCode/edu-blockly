@@ -503,6 +503,23 @@ line.blocklyFlyoutLine {
   fill: white;
 }
 
+.blocklyTreeIconCustom {
+    background: none !important;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 0 .25em;
+    width: 30px !important;
+    height: 100% !important;
+    line-height: 45px;
+    min-height: 45px;
+    vertical-align: middle;
+}
+
+.blocklyTreeIconCustom.functions::before {
+    content: "\f093";
+}
+
 </style>
 </head>
 <body onload="start()">

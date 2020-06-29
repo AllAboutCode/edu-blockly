@@ -108,7 +108,7 @@ Blockly.Toolbox = function(workspace) {
         'blocklyTreeSeparatorHorizontal ' +
         (workspace.RTL ?
         'blocklyHorizontalTreeRtl' : 'blocklyHorizontalTree');
-    this.config_['cssTreeIcon'] = '';
+    
   }
 
   /**
@@ -443,7 +443,6 @@ Blockly.Toolbox.prototype.syncTrees_ = function(treeIn, treeOut, pathToMedia) {
   var lastElement = null;
   for (var i = 0, childIn; (childIn = treeIn.childNodes[i]); i++) {
     if (!childIn.tagName) {
-      // Skip over text.
       continue;
     }
     switch (childIn.tagName.toUpperCase()) {
@@ -485,12 +484,15 @@ Blockly.Toolbox.prototype.syncTrees_ = function(treeIn, treeOut, pathToMedia) {
             // This is a category that directly contains blocks.
             // After the tree is rendered, open this category and show flyout.
             openNode = childOut;
+            
           }
           childOut.setExpanded(true);
         } else {
           childOut.setExpanded(false);
         }
         lastElement = childIn;
+
+
         break;
       case 'SEP':
         if (lastElement && lastElement.tagName.toUpperCase() == 'CATEGORY') {
@@ -631,9 +633,15 @@ Blockly.Toolbox.prototype.addColour_ = function(opt_tree) {
   var children = tree.getChildren(false);
   for (var i = 0, child; (child = children[i]); i++) {
     var element = child.getRowElement();
+
+    var catName = child.content_.toLowerCase();
+
     if (element) {
       if (this.hasColours_) {
         var border = '8px solid ' + (child.hexColour || '#ddd');
+        var iconclass = '<span class="blocklyTreeIcon blocklyTreeIconCustom ' + catName + '" id="blockly:1.label" role="presentation" style="display: inline-block;"></span>'
+        element.insertAdjacentHTML("afterbegin", iconclass);
+        
       } else {
         var border = 'none';
       }

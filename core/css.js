@@ -73,7 +73,7 @@ Blockly.Css.inject = function(hasCss, pathToMedia) {
   }
   Blockly.Css.injected_ = true;
   var text = Blockly.Css.CONTENT.join('\n');
-  Blockly.Css.CONTENT.length = 0;  // Garbage collect CSS content.
+
   if (!hasCss) {
     return;
   }

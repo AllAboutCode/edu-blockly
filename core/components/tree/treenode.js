@@ -92,7 +92,7 @@ Blockly.tree.TreeNode.prototype.getCalculatedIconClass = function() {
     }
   } else {
     if (config.cssFileIcon) {
-      return config.cssTreeIcon + ' ' + config.cssFileIcon;
+      return config.cssTreeIcon + ' blocklyTreeIconCustom' + config.cssFileIcon;
     }
   }
   return '';
