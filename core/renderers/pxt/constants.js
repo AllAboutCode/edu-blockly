@@ -313,7 +313,6 @@ Blockly.pxt.ConstantProvider = function() {
    */
   this.FIELD_DROPDOWN_SVG_ARROW = true;
 
-  this.ADD_START_HAT = true;
 
   /**
    * @override

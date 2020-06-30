@@ -143,6 +143,7 @@ Blockly.OUTPUT_VALUE = 2;
  */
 Blockly.NEXT_STATEMENT = 3;
 
+
 /**
  * ENUM for an up-facing block stack.  E.g. 'break out of loop'.
  * @const

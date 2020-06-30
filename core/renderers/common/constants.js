@@ -190,7 +190,7 @@ Blockly.blockRendering.ConstantProvider = function() {
    * connections. Can be overridden by 'hat' property on Theme.BlockStyle.
    * @type {boolean}
    */
-  this.ADD_START_HATS = false;
+  this.ADD_START_HATS = true;
 
   /**
    * Height of the top hat.
